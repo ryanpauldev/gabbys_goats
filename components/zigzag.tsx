@@ -4,6 +4,7 @@ import FeatImage01 from '@/public/images/gabby_graduation.jpg'
 import FeatImage02 from '@/public/images/gabby_holding_goat.jpeg'
 import FeatImage03 from '@/public/images/gabby_balancing_goat.jpg'
 import FeatHeaderImage from '@/public/images/gabby_with_pumpkins.jpg'
+import GabbyPNG from '@/public/images/gabby_png.png'
 
 export default function Zigzag() {
   return (
@@ -13,9 +14,20 @@ export default function Zigzag() {
 
           {/* Section header */}
           <div className="max-w-3xl mx-auto text-center pb-12 md:pb-16">
+            <div className="w-full flex justify-center" data-aos="fade-up">
+              <Image
+                src={FeatHeaderImage}
+                alt="ZioNotes features"
+                width={1797}
+                height={1513}
+                className="rounded-lg shadow-lg max-w-full h-auto"
+              />
+            </div>
+            
             {/*<div className="inline-flex text-sm font-semibold py-1 px-3 m-2 text-green-600 bg-green-200 rounded-full mb-4">Reach goals that matter</div>*/}
             <p className="text-xl text-gray-400 mb-2" data-aos="fade-up" data-aos-delay="200">A Courageous Heart and Resilient Spirit</p>
             <h1 className="h2 mb-4">The Legacy of Gabrielle Kraft Buckman</h1>
+            
             <p className="text-xl text-gray-400 mb-4">
               Gabrielle Kraft Buckman, a radiant soul born and raised in the heart of New Jersey, left a permanent mark on the world that transcends the brevity of her years. Endearingly referred to as Gabby, Gab, or Goober, her journey is a tapestry woven with threads of love, resilience, and a tenacious commitment to bringing light to the lives she touched.
             </p>
