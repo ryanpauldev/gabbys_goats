@@ -10,7 +10,7 @@ export default function Header() {
           <div className="shrink-0 mr-4">
             {/* Logo */}
             <Link href="/" className="block" aria-label="Cruip">
-              <img src="\ZioNotes Detailed Exec Summaries.png" alt="Logo" className="w-36 h-18" />
+              <img src="\GG_Logo_J.png" alt="Logo" className="w-36 h-18" />
             </Link>
           </div>
 

@@ -25,8 +25,9 @@ export default function Hero() {
 
           {/* Section header */}
           <div className="max-w-3xl mx-auto text-center pb-12 md:pb-16">
-            <h1 className="h1 mb-4" data-aos="fade-up">Create summaries of videos in seconds</h1>
-            <p className="text-xl text-gray-400 mb-8" data-aos="fade-up" data-aos-delay="200">Engage with your audience</p>
+            <p className="text-xl text-gray-400 mb-2" data-aos="fade-up" data-aos-delay="200">Welcome to</p>
+            <h1 className="h1 mb-4" data-aos="fade-up">Gabby’s GOATS</h1>
+            <p className="text-xl text-gray-400 mb-8" data-aos="fade-up" data-aos-delay="200">Giving Others Assistance To Serve</p>
             <div className="max-w-xs mx-auto sm:max-w-none sm:flex sm:justify-center">
               <div data-aos="fade-up" data-aos-delay="400">
                 <a
@@ -35,15 +36,15 @@ export default function Hero() {
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  Free Assessment
+                  Donate Here
                 </a>
               </div>
 
-              {/*
+              
               <div data-aos="fade-up" data-aos-delay="600">
-                <a className="btn text-white bg-gray-700 hover:bg-gray-800 w-full sm:w-auto sm:ml-4" href="#0">Learn more</a>
+                <a className="btn text-white bg-purple-600 hover:bg-purple-700 w-full sm:w-auto sm:ml-4" href="#0">Become a Volunteer</a>
               </div>
-              */}
+
             </div>
           </div>
 
