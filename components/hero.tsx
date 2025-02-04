@@ -29,7 +29,6 @@ export default function Hero() {
               <div data-aos="fade-up" data-aos-delay="400">
                 <a
                   className="btn text-white bg-purple-600 hover:bg-purple-700 w-full mb-4 sm:w-auto sm:mb-0"
-                  href="https://calendly.com/jeff_ziotag"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
@@ -39,7 +38,7 @@ export default function Hero() {
 
               
               <div data-aos="fade-up" data-aos-delay="600">
-                <a className="btn text-white bg-purple-600 hover:bg-purple-700 w-full sm:w-auto sm:ml-4" href="#0">Become a Volunteer</a>
+                <a className="btn text-white bg-purple-600 hover:bg-purple-700 w-full sm:w-auto sm:ml-4" href="https://forms.gle/hYj46wLLRdxx34aa9">Become a Volunteer</a>
               </div>
 
             </div>
