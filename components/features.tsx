@@ -7,7 +7,7 @@ import FeatHeaderImage from '@/public/images/buckman_family.png'
 
 export default function Features() {
   return (
-    <section>
+    <section id = "about_us">
       <div className="max-w-6xl mx-auto px-4 sm:px-6">
         <div className="py-12 md:py-20 border-t border-gray-800">
 

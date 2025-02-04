@@ -2,9 +2,9 @@
 
 import { useState } from 'react'
 
-export default function Banner() {
+export default function Banner() {/*
   const [bannerOpen, setBannerOpen] = useState<boolean>(true)
-
+  {}
   return (
     <>
       
@@ -37,4 +37,4 @@ export default function Banner() {
       
     </>
   )
-}
+*/}

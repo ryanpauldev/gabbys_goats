@@ -19,8 +19,8 @@ export async function POST(req: NextRequest) {
 
         const mailOptions = {
             from: process.env.EMAIL_USER,
-            to: 'ryan@zionotes.com',
-            subject: 'Newsletter Signup',
+            to: 'ryan.r.paul22@gmail.com',
+            subject: 'Gabbys Goats Sign Up',
             text: `New signup: ${email}`,
         };
 

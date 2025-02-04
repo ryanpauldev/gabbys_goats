@@ -1,6 +1,6 @@
 export const metadata = {
-  title: 'ZioNotes',
-  description: 'ZioNotes is AWESOME :D',
+  title: "Gabby's Goats",
+  description: 'Giving Others Assistance To Serve',
 }
 
 import Hero from '@/components/hero'
@@ -9,7 +9,6 @@ import Newsletter from '@/components/newsletter'
 import Zigzag from '@/components/zigzag'
 import Testimonials from '@/components/testimonials'
 import Blocks from '@/components/blocks'
-import Banner from '@/components/banner'
 import ModalVideo from '@/components/modal-video'
 
 export default function Home() {
@@ -20,7 +19,6 @@ export default function Home() {
       <Features />
       <Testimonials />
       <Newsletter />
-      <Banner />
     </>
   )
 }

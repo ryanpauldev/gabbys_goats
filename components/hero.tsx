@@ -1,9 +1,6 @@
-import VideoThumb from '@/public/images/hero-image-01.jpg'
-import ModalVideo from '@/components/modal-video'
-
 export default function Hero() {
   return (
-    <section>
+    <section id = "home">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 relative">
 
         {/* Illustration behind hero content */}
