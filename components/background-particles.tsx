@@ -18,7 +18,7 @@ const BackgroundParticles = () => {
                 init={particlesInit}
                 options={{
                     particles: {
-                        number: { value: 30, density: { enable: true, area: 2000 } }, // Spread-out particles
+                        number: { value: 100, density: { enable: true, area: 2000 } }, // Spread-out particles
                         color: { value: "#ffffff" },
                         shape: {
                             type: "image",

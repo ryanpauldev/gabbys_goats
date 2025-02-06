@@ -8,10 +8,10 @@ export default function Testimonials() {
   return (
     <section id= "tributes">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 bg-gray-900">
-        <div className="py-12 md:py-20 border-t border-gray-800">
+        <div className="py-12 border-t border-gray-800">
 
           {/* Section header */}
-          <div className="max-w-3xl mx-auto text-center pb-12 md:pb-20">
+          <div className="max-w-3xl mx-auto text-center pb-12">
             <h2 className="h2 mb-4 ">Tributes</h2>
             <p className="text-xl text-gray-400 ">Gabby's Impact</p>
           </div>
