@@ -65,20 +65,32 @@ export default function MobileMenu() {
         className="absolute top-full z-20 left-0 w-full px-4 sm:px-6 overflow-hidden transition-all duration-300 ease-in-out"
         style={mobileNavOpen ? { maxHeight: mobileNav.current?.scrollHeight, opacity: 1 } : { maxHeight: 0, opacity: 0.8 }}
       >
-        <ul className="bg-white px-4 py-2 text-center">
-          {['home', 'meet_gabby', 'about_us', 'dedications', 'donate'].map((section, index) => (
+        <ul className="bg-gray-800 px-4 py-2 text-center">
+          {['home', 'meet_gabby', 'about_us', 'dedications'].map((section, index) => (
             <li key={index}>
-              <Link
-                href="https://buy.stripe.com/test_00gaFV86L7SFfhS7st"
-                className="font-medium text-purple-600 hover:text-gray-200 py-3 block transition duration-150 ease-in-out cursor-pointer"
-                target="_blank"
-                rel="noopener noreferrer"
+              <ScrollLink
+                to={section}
+                smooth={true}
+                duration={600}
+                offset={-80}
+                className="font-medium text-purple-600 hover:text-gray-200 px-4 py-3 block transition duration-150 ease-in-out cursor-pointer"
                 onClick={() => setMobileNavOpen(false)}
               >
-                Donate
-              </Link>
+                {section.replace('_', ' ').replace(/\b\w/g, c => c.toUpperCase())}
+              </ScrollLink>
             </li>
           ))}
+          <li>
+            <Link
+              href="https://buy.stripe.com/test_00gaFV86L7SFfhS7st"
+              className="font-medium text-purple-600 hover:text-gray-200 py-3 block transition duration-150 ease-in-out cursor-pointer"
+              target="_blank"
+              rel="noopener noreferrer"
+              onClick={() => setMobileNavOpen(false)}
+            >
+              Donate
+            </Link>
+          </li>
           <li>
             <Link
               href="https://forms.gle/hYj46wLLRdxx34aa9"
