@@ -51,7 +51,7 @@ export default function Header() {
                 { name: "Home", to: "home" },
                 { name: "Meet Gabby", to: "meet_gabby" },
                 { name: "About Us", to: "about_us" },
-                { name: "Tributes", to: "dedications" },
+                { name: "Tributes", to: "tributes" },
               ].map((item, index) => (
                 <motion.li key={item.to} custom={index} variants={navVariants}>
                   <ScrollLink
