@@ -16,7 +16,7 @@ export default function Features() {
             {/*<div className="inline-flex text-sm font-semibold py-1 px-3 m-2 text-green-600 bg-green-200 rounded-full mb-4">Reach goals that matter</div>*/}
             <p className="text-xl text-gray-400 mb-2" data-aos="fade-up" data-aos-delay="200">About Gabby's Goats</p>
             <h1 className="h2 mb-4">Our Mission, Vision, and Purpose</h1>
-            <div className="w-full flex justify-center" data-aos="fade-up">
+            {/* <div className="w-full flex justify-center" data-aos="fade-up">
               <Image
                 src={FeatHeaderImage}
                 alt="ZioNotes features"
@@ -24,7 +24,7 @@ export default function Features() {
                 height={1513}
                 className="rounded-lg shadow-lg max-w-full h-auto"
               />
-            </div>
+            </div> */}
           </div>
 
           {/* Items */}

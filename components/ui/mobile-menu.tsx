@@ -48,7 +48,7 @@ export default function MobileMenu() {
       >
         <span className="sr-only">Menu</span>
         <svg
-          className="w-6 h-6 fill-current text-gray-300 hover:text-gray-200 transition duration-150 ease-in-out"
+          className="w-6 h-6 fill-current text-white hover:text-white transition duration-150 ease-in-out"
           viewBox="0 0 24 24"
           xmlns="http://www.w3.org/2000/svg"
         >
@@ -65,7 +65,7 @@ export default function MobileMenu() {
         className="absolute top-full z-20 left-0 w-full px-4 sm:px-6 overflow-hidden transition-all duration-300 ease-in-out"
         style={mobileNavOpen ? { maxHeight: mobileNav.current?.scrollHeight, opacity: 1 } : { maxHeight: 0, opacity: 0.8 }}
       >
-        <ul className="bg-gray-800 px-4 py-2 text-center">
+        <ul className="bg-purple-600 px-4 py-2 text-center">
           {['home', 'meet_gabby', 'about_us', 'dedications'].map((section, index) => (
             <li key={index}>
               <ScrollLink
@@ -73,7 +73,7 @@ export default function MobileMenu() {
                 smooth={true}
                 duration={600}
                 offset={-80}
-                className="font-medium text-purple-600 hover:text-gray-200 px-4 py-3 block transition duration-150 ease-in-out cursor-pointer"
+                className="font-medium text-white hover:text-gray-200 px-4 py-3 block transition duration-150 ease-in-out cursor-pointer"
                 onClick={() => setMobileNavOpen(false)}
               >
                 {section.replace('_', ' ').replace(/\b\w/g, c => c.toUpperCase())}
@@ -83,7 +83,7 @@ export default function MobileMenu() {
           <li>
             <Link
               href="https://buy.stripe.com/test_00gaFV86L7SFfhS7st"
-              className="font-medium text-purple-600 hover:text-gray-200 py-3 block transition duration-150 ease-in-out cursor-pointer"
+              className="font-medium text-white hover:text-gray-200 py-3 block transition duration-150 ease-in-out cursor-pointer"
               target="_blank"
               rel="noopener noreferrer"
               onClick={() => setMobileNavOpen(false)}
@@ -94,7 +94,7 @@ export default function MobileMenu() {
           <li>
             <Link
               href="https://forms.gle/hYj46wLLRdxx34aa9"
-              className="font-medium text-purple-600 hover:text-gray-200 py-3 block transition duration-150 ease-in-out cursor-pointer"
+              className="font-medium text-white hover:text-gray-200 py-3 block transition duration-150 ease-in-out cursor-pointer"
               target="_blank"
               rel="noopener noreferrer"
               onClick={() => setMobileNavOpen(false)}

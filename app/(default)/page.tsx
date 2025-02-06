@@ -3,18 +3,19 @@ export const metadata = {
   description: 'Giving Others Assistance To Serve',
 }
 
+import { useState } from "react";
 import Hero from '@/components/hero'
 import Features from '@/components/features'
 import Newsletter from '@/components/newsletter'
 import Zigzag from '@/components/zigzag'
 import Testimonials from '@/components/testimonials'
-import Blocks from '@/components/blocks'
-import ModalVideo from '@/components/modal-video'
-import Donate from '@/components/donate'
+import BackgroundImages from '@/components/background-images'
+
 
 export default function Home() {
   return (
     <>
+      
       <Hero />
       <Zigzag />
       <Features />

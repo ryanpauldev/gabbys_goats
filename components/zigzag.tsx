@@ -17,12 +17,12 @@ export default function Zigzag() {
             
             {/*<div className="inline-flex text-sm font-semibold py-1 px-3 m-2 text-green-600 bg-green-200 rounded-full mb-4">Reach goals that matter</div>*/}
             <p className="text-xl text-gray-400 mb-2" data-aos="fade-up" data-aos-delay="200">A Courageous Heart and Resilient Spirit</p>
-            <h1 className="h2 mb-4">The Legacy of Gabrielle Kraft Buckman</h1>
+            <h1 className="h2 mb-4" data-aos="fade-up">The Legacy of Gabrielle Kraft Buckman</h1>
             
-            <p className="text-xl text-gray-400 mb-4">
+            <p className="text-xl text-gray-400 mb-4" data-aos="fade-up">
               Gabrielle Kraft Buckman, a radiant soul born and raised in the heart of New Jersey, left a permanent mark on the world that transcends the brevity of her years. Endearingly referred to as Gabby, Gab, or Goober, her journey is a tapestry woven with threads of love, resilience, and a tenacious commitment to bringing light to the lives she touched.
             </p>
-            <p className="text-xl text-gray-400 mb-4">
+            <p className="text-xl text-gray-400 mb-4" data-aos="fade-up">
               From a young age, Gabby’s infectious smile had the power to warm any heart; the first being her mother, Cheryl, father, David, and sister, Jackie. As she grew older, this smile became known as a beloved friend, classmate, student, teammate, and eventually, clinician. In her studies, she excelled as an A student, participated as a vital team on her high school’s soccer team, and effortlessly befriended everyone she encountered. Goats, humor, her cherished family, and a network of friends spanning the spectrum of humanity were the pillars of her vibrant life.
             </p>
             <div className="w-full flex justify-center" data-aos="fade-up">

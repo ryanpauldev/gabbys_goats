@@ -1,3 +1,6 @@
+import Image from 'next/image'
+import FeatHeaderImage from '@/public/images/buckman_family.png'
+
 export default function Hero() {
   return (
     <section id = "home">
@@ -22,9 +25,19 @@ export default function Hero() {
 
           {/* Section header */}
           <div className="max-w-3xl mx-auto text-center pb-12 md:pb-16">
-            <p className="text-xl text-gray-400 mb-2" data-aos="fade-up" data-aos-delay="200">Welcome to</p>
+            <p className="text-xl text-gray-400 mb-2" data-aos="fade-up" data-aos-delay="200">Giving Others Assistance To Serve</p>
             <h1 className="h1 mb-4" data-aos="fade-up">Gabby’s GOATS</h1>
-            <p className="text-xl text-gray-400 mb-8" data-aos="fade-up" data-aos-delay="200">Giving Others Assistance To Serve</p>
+            <div className="w-full flex justify-center mb-8" data-aos="fade-up">
+              <Image
+                src={FeatHeaderImage}
+                alt="ZioNotes features"
+                width={1797}
+                height={1513}
+                className="rounded-lg shadow-lg max-w-full h-auto"
+              />
+            </div>
+            <p className="text-xl text-gray-400 mb-8" data-aos="fade-up" data-aos-delay="200">Our foundation seeks to commemorate Gabrielle Kraft Buckman’s unwavering spirit of generosity and love. Gabby, known affectionately as Goober, Goob, Gabs, devoted her life to uplifting others and leaving an indelible mark of selflessness.</p>
+            <p className="text-xl text-gray-400 mb-8" data-aos="fade-up" data-aos-delay="200">Gabrielle’s profound impact on countless lives, both intimately known and briefly encountered, is a testament to the depth of her compassion. The foundation stands as a tribute to Gabby’s boundless love, aiming to continue the legacy of kindness she embodied and the passion she had to give to those who gave.</p>
             <div className="max-w-xs mx-auto sm:max-w-none sm:flex sm:justify-center">
               <div data-aos="fade-up" data-aos-delay="400">
                 <a
