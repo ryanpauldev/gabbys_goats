@@ -10,6 +10,7 @@ import Zigzag from '@/components/zigzag'
 import Testimonials from '@/components/testimonials'
 import Blocks from '@/components/blocks'
 import ModalVideo from '@/components/modal-video'
+import Donate from '@/components/donate'
 
 export default function Home() {
   return (

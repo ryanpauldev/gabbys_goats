@@ -68,16 +68,15 @@ export default function MobileMenu() {
         <ul className="bg-white px-4 py-2 text-center">
           {['home', 'meet_gabby', 'about_us', 'dedications', 'donate'].map((section, index) => (
             <li key={index}>
-              <ScrollLink
-                to={section}
-                smooth={true}
-                duration={600}
-                offset={-80}
-                className="font-medium text-purple-600 hover:text-gray-200 px-4 py-3 block transition duration-150 ease-in-out cursor-pointer"
+              <Link
+                href="https://buy.stripe.com/test_00gaFV86L7SFfhS7st"
+                className="font-medium text-purple-600 hover:text-gray-200 py-3 block transition duration-150 ease-in-out cursor-pointer"
+                target="_blank"
+                rel="noopener noreferrer"
                 onClick={() => setMobileNavOpen(false)}
               >
-                {section.replace('_', ' ').replace(/\b\w/g, c => c.toUpperCase())}
-              </ScrollLink>
+                Donate
+              </Link>
             </li>
           ))}
           <li>

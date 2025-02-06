@@ -31,6 +31,7 @@ export default function Hero() {
                   className="btn text-white bg-purple-600 hover:bg-purple-700 w-full mb-4 sm:w-auto sm:mb-0"
                   target="_blank"
                   rel="noopener noreferrer"
+                  href="https://buy.stripe.com/test_00gaFV86L7SFfhS7st"
                 >
                   Donate Here
                 </a>

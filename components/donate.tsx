@@ -4,7 +4,7 @@ import { loadStripe } from "@stripe/stripe-js";
 
 const stripePromise = loadStripe("your-publishable-key-here");
 
-export default function DonateForm() {
+export default function Donate() {
     const [amount, setAmount] = useState(10);
     const [loading, setLoading] = useState(false);
 

@@ -67,15 +67,14 @@ export default function Header() {
                 </ScrollLink>
               </li>
               <li>
-                <ScrollLink
-                  to="donate"
-                  smooth={true}
-                  duration={600}
-                  offset={-80} // Adjust for fixed header
-                  className="font-medium text-purple-600 hover:text-gray-200 px-4 py-3 flex items-center transition duration-150 ease-in-out cursor-pointer"
+                <Link
+                  href="https://buy.stripe.com/test_00gaFV86L7SFfhS7st"
+                  className="font-medium text-purple-600 hover:text-gray-200 px-4 py-3 flex items-center transition duration-150 ease-in-out"
+                  target="_blank"
+                  rel="noopener noreferrer"
                 >
                   Donate
-                </ScrollLink>
+                </Link>
               </li>
               <li>
                 <Link
