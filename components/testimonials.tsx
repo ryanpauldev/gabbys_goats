@@ -6,14 +6,14 @@ import TestimonialImage03 from '@/public/images/testimonial-03.jpg'
 
 export default function Testimonials() {
   return (
-    <section id= "dedications">
-      <div className="max-w-6xl mx-auto px-4 sm:px-6">
+    <section id= "tributes">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 bg-gray-900">
         <div className="py-12 md:py-20 border-t border-gray-800">
 
           {/* Section header */}
           <div className="max-w-3xl mx-auto text-center pb-12 md:pb-20">
-            <h2 className="h2 mb-4">Tributes</h2>
-            <p className="text-xl text-gray-400">Gabby's Impact</p>
+            <h2 className="h2 mb-4 ">Tributes</h2>
+            <p className="text-xl text-gray-400 ">Gabby's Impact</p>
           </div>
 
           {/* Testimonials */}
@@ -29,11 +29,11 @@ export default function Testimonials() {
                   </svg>
                 </div>
               </div>
-              <blockquote className="text-lg text-gray-400 grow">To me, Gabby is a perpetual reminder of the power of resilience and unconditional love for others, particularly when times are unkind.
+              <blockquote className="text-lg text-gray-400 grow ">To me, Gabby is a perpetual reminder of the power of resilience and unconditional love for others, particularly when times are unkind.
 
                 “It often takes a lifetime to embrace our unique purpose and inspire others. Although her time on earth was short, Gabby remains a perpetual beacon of hope that reminds me every day to come out of the shadows and face life’s challenges while experiencing every moment to its fullest. Even in her afterglow, her message remains clear…the human spirit is limitless and hope eternal. Rise and shine for your time is now. Face life’s challenges with dignity and strength. Be kind to others and love deeply with all your heart for as long as you can!”</blockquote>
               <div className="text-gray-700 font-medium mt-6 pt-5 border-t border-gray-700">
-                <cite className="text-gray-200 not-italic">Roseanna Tufano, OTD, LMFT, OTR/L</cite> - <a className="text-purple-600 hover:text-gray-200 transition duration-150 ease-in-out">
+                <cite className="text-gray-200 not-italic ">Roseanna Tufano, OTD, LMFT, OTR/L</cite> - <a className="text-purple-600 hover:text-gray-200 transition duration-150 ease-in-out ">
                  <br></br>
                   Quinnipiac University <br></br>
                   Clinical Professor, Occupational Therapy <br></br>

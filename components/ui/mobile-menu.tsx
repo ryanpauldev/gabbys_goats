@@ -66,7 +66,7 @@ export default function MobileMenu() {
         style={mobileNavOpen ? { maxHeight: mobileNav.current?.scrollHeight, opacity: 1 } : { maxHeight: 0, opacity: 0.8 }}
       >
         <ul className="bg-purple-600 px-4 py-2 text-center">
-          {['home', 'meet_gabby', 'about_us', 'dedications'].map((section, index) => (
+          {['home', 'meet_gabby', 'about_us', 'tributes'].map((section, index) => (
             <li key={index}>
               <ScrollLink
                 to={section}
