@@ -4,7 +4,7 @@
   "private": true,
   "homepage": "https://ryanpauldev.github.io/gabbys_goats/",
   "scripts": {
-    "dev": "next dev",
+    "dev": "node server.js",
     "build": "next build",
     "start": "next start",
     "lint": "next lint"
@@ -20,9 +20,14 @@
     "@types/react": "^18.2.42",
     "@types/react-dom": "^18.2.17",
     "aos": "^3.0.0-beta.6",
+    "axios": "^1.7.9",
+    "express": "^4.21.2",
     "framer-motion": "^12.3.1",
+    "fs": "^0.0.1-security",
+    "https": "^1.0.0",
     "next": "^14.2.5",
     "nodemailer": "^6.9.14",
+    "path": "^0.12.7",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "react-scroll": "^1.9.0",
