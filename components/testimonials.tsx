@@ -42,7 +42,7 @@ export default function Testimonials() {
             </div>
 
             {/* 2nd testimonial */}
-            <div className="flex flex-col h-full p-6 " data-aos="fade-up" data-aos-delay="200">
+            <div className="flex flex-col h-full p-6 " data-aos="fade-up" data-aos-delay="50">
               <div>
                 <div className="relative inline-flex flex-col mb-4">
                   {/*<Image className="rounded-full" src={TestimonialImage02} width={48} height={48} alt="Testimonial 02" /> */}
@@ -87,7 +87,7 @@ export default function Testimonials() {
             </div>
 
             {/* 4th testimonial */}
-            <div className="flex flex-col h-full p-6 " data-aos="fade-up" data-aos-delay="400">
+            <div className="flex flex-col h-full p-6 " data-aos="fade-up" data-aos-delay="50">
               <div>
                 <div className="relative inline-flex flex-col mb-4">
                   {/*<Image className="rounded-full" src={TestimonialImage03} width={48} height={48} alt="Testimonial 03" /> */}
@@ -106,7 +106,7 @@ export default function Testimonials() {
             </div>
 
             {/* 5th testimonial */}
-            <div className="flex flex-col h-full p-6 " data-aos="fade-up" data-aos-delay="200">
+            <div className="flex flex-col h-full p-6 " data-aos="fade-up" data-aos-delay="50">
               <div>
                 <div className="relative inline-flex flex-col mb-4">
                   {/*<Image className="rounded-full" src={TestimonialImage02} width={48} height={48} alt="Testimonial 02" /> */}
@@ -126,7 +126,7 @@ export default function Testimonials() {
             </div>
 
             {/* 6th testimonial */}
-            <div className="flex flex-col h-full p-6 " data-aos="fade-up" data-aos-delay="400">
+            <div className="flex flex-col h-full p-6 " data-aos="fade-up" data-aos-delay="50">
               <div>
                 <div className="relative inline-flex flex-col mb-4">
                   {/*<Image className="rounded-full" src={TestimonialImage03} width={48} height={48} alt="Testimonial 03" /> */}

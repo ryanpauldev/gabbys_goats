@@ -3,6 +3,7 @@
 import React, { useEffect, useRef, useState } from 'react';
 import axios from 'axios';
 import Receipt from '@/components/receipt';
+import { useRouter } from 'next/navigation';
 
 declare global {
     interface Window {
@@ -48,6 +49,7 @@ const Donate: React.FC = () => {
         transactionId: string;
         date: string;
     } | null>(null);
+    const router = useRouter();
 
     useEffect(() => {
         if (cloverInitialized.current) return;
@@ -72,6 +74,29 @@ const Donate: React.FC = () => {
             // Remove script
             const existingScript = document.querySelector('script[src*="checkout.clover.com"]');
             if (existingScript) existingScript.remove();
+
+            // Remove Clover iframe and footer elements
+            const cloverIframes = document.querySelectorAll('iframe[src*="clover.com"]');
+            cloverIframes.forEach(iframe => iframe.remove());
+
+            // Remove Clover footer elements
+            const cloverFooter = document.querySelector('.clover-footer');
+            if (cloverFooter) cloverFooter.remove();
+
+            // Remove reCAPTCHA elements
+            const recaptchaElements = document.querySelectorAll('.grecaptcha-badge');
+            recaptchaElements.forEach(element => element.remove());
+
+            // Remove any reCAPTCHA scripts
+            const recaptchaScripts = document.querySelectorAll('script[src*="recaptcha"]');
+            recaptchaScripts.forEach(script => script.remove());
+
+            // Remove reCAPTCHA iframe
+            const recaptchaIframes = document.querySelectorAll('iframe[src*="recaptcha"]');
+            recaptchaIframes.forEach(iframe => iframe.remove());
+
+            // Clean up any leftover reCAPTCHA related elements
+            document.querySelectorAll('[class*="grecaptcha"]').forEach(el => el.remove());
         };
 
         // Clean up before initializing
@@ -93,6 +118,27 @@ const Donate: React.FC = () => {
 
         document.head.appendChild(script);
         return cleanup;
+    }, []);
+
+    useEffect(() => {
+        // Cleanup function runs when component unmounts
+        return () => {
+            // Clean up elements
+            if (cloverElements.current) {
+                Object.values(cloverElements.current).forEach((element: CloverElement) => {
+                    if (element?.destroy) element.destroy();
+                });
+            }
+            
+            // Reset state
+            cloverElements.current = {};
+            cloverInstance.current = null;
+            cloverInitialized.current = false;
+
+            // Remove script
+            const existingScript = document.querySelector('script[src*="checkout.clover.com"]');
+            if (existingScript) existingScript.remove();
+        };
     }, []);
 
 const initializeClover = () => {
@@ -203,7 +249,7 @@ const initializeClover = () => {
         // Show processing state
         if (cardResponse) {
             cardResponse.className = 'mt-4 text-center text-gray-400';
-            cardResponse.textContent = 'Processing payment...';
+            cardResponse.textContent = 'Processing payment...';0
         }
 
         const result = await cloverInstance.current.createToken({
@@ -260,7 +306,7 @@ const initializeClover = () => {
                     <div className="relative">
                         <div className="text-center mb-12">
                             <h1 className="text-4xl md:text-5xl font-bold text-gray-100 mb-4">
-                                Support Gabbys Goats
+                                Support Gabby's GOATS
                             </h1>
                             <p className="text-lg text-gray-400 max-w-2xl mx-auto">
                                 Your generous donation helps us continue our mission to support and uplift the community.
@@ -292,15 +338,22 @@ const initializeClover = () => {
                                 <div className="flex justify-center">
                                     <div className="relative h-[48px] w-[120px]">
                                         <span className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400 z-10">$</span>
-                                        <input
-                                            type="number"
-                                            id="amount"
-                                            min="1"
-                                            value={amount}
-                                            onChange={(e) => setAmount(Number(e.target.value))}
-                                            className="form-input absolute inset-0 w-full pl-8 pr-4 bg-white text-gray-200"
-                                            required
-                                        />
+                                            <input
+                                                type="number"
+                                                id="amount"
+                                                min="1"
+                                                step="0.01"  // Add step attribute to allow decimals
+                                                value={amount || ''} 
+                                                onChange={(e) => {
+                                                    // Parse the input value as float instead of integer
+                                                    const inputValue = e.target.value;
+                                                    const parsedValue = parseFloat(inputValue);
+                                                    // Keep two decimal places max
+                                                    setAmount(isNaN(parsedValue) ? 0 : Math.round(parsedValue * 100) / 100);
+                                                }}
+                                                className="form-input absolute inset-0 w-full pl-8 pr-4 bg-white text-gray-200"
+                                                required
+                                            />
                                     </div>
                                 </div>
                             </div>
@@ -349,9 +402,14 @@ const initializeClover = () => {
 
                             <button
                                 type="submit"
-                                className="btn w-full text-white bg-purple-600 hover:bg-purple-700"
+                                disabled={amount <= 1}
+                                className={`btn w-full text-white ${
+                                    amount <= 1 
+                                        ? 'bg-gray-600 cursor-not-allowed' 
+                                        : 'bg-purple-600 hover:bg-purple-700'
+                                }`}
                             >
-                                Donate ${amount}
+                                {amount <= 1 ? 'Enter Amount' : `Donate $${amount}`}
                             </button>
                         </form>
                         <div id="card-response" role="alert" className="mt-4 text-center text-red-400"></div>

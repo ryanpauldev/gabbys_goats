@@ -2,6 +2,7 @@
 import dynamic from "next/dynamic";
 import { useState, useRef, useEffect } from 'react'
 import Link from 'next/link'
+import { usePathname, useRouter } from 'next/navigation'
 
 // Dynamically import react-scroll to avoid SSR issues
 const ScrollLink = dynamic(() =>
@@ -11,9 +12,24 @@ const ScrollLink = dynamic(() =>
 
 export default function MobileMenu() {
   const [mobileNavOpen, setMobileNavOpen] = useState<boolean>(false)
-
+  const pathname = usePathname();
+  const router = useRouter();
+  const isDonate = pathname === '/donate';
   const trigger = useRef<HTMLButtonElement>(null)
   const mobileNav = useRef<HTMLDivElement>(null)
+
+  const handleScrollLink = async (to: string) => {
+    if (isDonate) {
+      await router.push('/');
+      setTimeout(() => {
+        const element = document.getElementById(to);
+        if (element) {
+          element.scrollIntoView({ block: 'start' });
+        }
+      }, 100);
+    }
+    setMobileNavOpen(false);
+  };
 
   // close the mobile menu on click outside
   useEffect(() => {
@@ -66,42 +82,52 @@ export default function MobileMenu() {
         style={mobileNavOpen ? { maxHeight: mobileNav.current?.scrollHeight, opacity: 1 } : { maxHeight: 0, opacity: 0.8 }}
       >
         <ul className="bg-purple-600 px-4 py-2 text-center">
-          {['home', 'meet_gabby', 'about_us', 'tributes'].map((section, index) => (
-            <li key={index}>
-              <ScrollLink
-                to={section}
-                smooth={true}
-                duration={600}
-                offset={-80}
-                className="font-medium text-white hover:text-gray-200 px-4 py-3 block transition duration-150 ease-in-out cursor-pointer"
-                onClick={() => setMobileNavOpen(false)}
-              >
-                {section.replace('_', ' ').replace(/\b\w/g, c => c.toUpperCase())}
-              </ScrollLink>
+          {[
+            { name: "Home", to: "home" },
+            { name: "Meet Gabby", to: "meet_gabby" },
+            { name: "About Us", to: "about_us" },
+            { name: "Tributes", to: "tributes" },
+          ].map((item) => (
+            <li key={item.to}>
+              {isDonate ? (
+                <Link
+                  href="/"
+                  onClick={() => handleScrollLink(item.to)}
+                  className="font-medium text-white hover:text-gray-200 px-4 py-3 block transition duration-150 ease-in-out cursor-pointer"
+                >
+                  {item.name}
+                </Link>
+              ) : (
+                <ScrollLink
+                  to={item.to}
+                  smooth={true}
+                  duration={350}
+                  offset={-80}
+                  className="font-medium text-white hover:text-gray-200 px-4 py-3 block transition duration-150 ease-in-out cursor-pointer"
+                  onClick={() => setMobileNavOpen(false)}
+                >
+                  {item.name}
+                </ScrollLink>
+              )}
             </li>
           ))}
-          <li>
-            <Link
-              href="https://buy.stripe.com/test_00gaFV86L7SFfhS7st"
-              className="font-medium text-white hover:text-gray-200 py-3 block transition duration-150 ease-in-out cursor-pointer"
-              target="_blank"
-              rel="noopener noreferrer"
-              onClick={() => setMobileNavOpen(false)}
-            >
-              Donate
-            </Link>
-          </li>
-          <li>
-            <Link
-              href="https://forms.gle/hYj46wLLRdxx34aa9"
-              className="font-medium text-white hover:text-gray-200 py-3 block transition duration-150 ease-in-out cursor-pointer"
-              target="_blank"
-              rel="noopener noreferrer"
-              onClick={() => setMobileNavOpen(false)}
-            >
-              Contact Us
-            </Link>
-          </li>
+          
+          {/* External links */}
+          {[
+            { name: "Donate", href: "/donate" },
+            { name: "Contact Us", href: "https://forms.gle/hYj46wLLRdxx34aa9" },
+          ].map((item) => (
+            <li key={item.href}>
+              <Link
+                href={item.href}
+                className="font-medium text-white hover:text-gray-200 px-4 py-3 block transition duration-150 ease-in-out cursor-pointer"
+                {...(item.name === "Contact Us" ? { target: "_blank", rel: "noopener noreferrer" } : {})}
+                onClick={() => setMobileNavOpen(false)}
+              >
+                {item.name}
+              </Link>
+            </li>
+          ))}
         </ul>
       </nav>
     </div>
