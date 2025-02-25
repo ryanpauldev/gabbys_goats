@@ -24,7 +24,7 @@ export const metadata: Metadata = {
     type: 'website',
     locale: 'en_US',
     url: 'https://gabbys-goats.vercel.app/',
-    siteName: "Gabby's Goats",
+    siteName: "Gabby's GOATS",
     title: "Gabby's GOATS | Giving Others Assistance To Serve",
     description: "Supporting and uplifting the community through Gabby's legacy of kindness and service. GOATS - Giving Others Assistance To Serve.",
     images: [
@@ -38,7 +38,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: "Gabby's Goats | Giving Others Assistance To Serve",
+    title: "Gabby's GOATS | Giving Others Assistance To Serve",
     description: "Supporting and uplifting the community through Gabby's legacy of kindness and service.",
     images: ['/images/og-image.png'], // Same image as OG
   },
