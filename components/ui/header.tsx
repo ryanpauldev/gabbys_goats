@@ -5,6 +5,8 @@ import Link from "next/link";
 import { motion } from "framer-motion";
 import MobileMenu from './mobile-menu';
 import { usePathname, useRouter } from 'next/navigation';
+import Image from 'next/image'
+import Logo from '@/public/images/optimized/GG_Logo_J.png'
 
 // Dynamically import react-scroll to avoid SSR issues
 const ScrollLink = dynamic(() =>
@@ -56,7 +58,14 @@ export default function Header() {
               className="block cursor-pointer"
               aria-label="Gabby's Goats Home"
             >
-              <img src="\GG_Logo_J.png" alt="Logo" className="w-36 h-18" />
+              <Image
+                src={Logo}
+                alt="Gabby's Goats Logo"
+                width={144}  // w-36 equivalent
+                height={72}  // h-18 equivalent
+                priority
+                quality={90}
+              />
             </Link>
           </div>
 

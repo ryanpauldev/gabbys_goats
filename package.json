@@ -7,7 +7,8 @@
     "dev": "node server.js",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "optimize-images": "node scripts/optimize-images.js"
   },
   "dependencies": {
     "@headlessui/react": "^1.7.17",
@@ -33,7 +34,6 @@
     "react-scroll": "^1.9.0",
     "react-slick": "^0.30.2",
     "react-tsparticles": "^2.12.2",
-    "sharp": "^0.33.5",
     "slick-carousel": "^1.8.1",
     "swiper": "^11.1.9",
     "tsparticles": "^3.8.1",
@@ -49,6 +49,7 @@
     "@types/stripe": "^8.0.416",
     "autoprefixer": "^10.4.16",
     "postcss": "^8.4.32",
+    "sharp": "^0.33.5",
     "tailwindcss": "^3.3.6"
   }
 }

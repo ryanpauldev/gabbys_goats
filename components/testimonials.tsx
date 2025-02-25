@@ -1,4 +1,5 @@
 import Image from 'next/image'
+import YouTubeFacade from './youtube-facade';
 
 import TestimonialImage01 from '@/public/images/testimonial-01.jpg'
 import TestimonialImage02 from '@/public/images/testimonial-02.jpg'
@@ -147,20 +148,10 @@ export default function Testimonials() {
           </div>
           {/* Embedded YouTube Video */}
           <div className="max-w-3xl mx-auto mt-12 mb-4" data-aos="fade-up">
-            <div
-              className="relative w-full rounded-lg shadow-lg overflow-hidden"
-              style={{ paddingBottom: '56.25%', height: 0 }}
-            >
-              <iframe
-                className="absolute top-0 left-0 w-full h-full rounded-lg shadow-lg"
-                width="560"
-                height="315"
-                src="https://www.youtube.com/embed/BWj6sYPxZbY"
-                title="YouTube video player"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowFullScreen
-              ></iframe>
-            </div>
+            <YouTubeFacade
+              videoId="BWj6sYPxZbY"
+              title="YouTube video player"
+            />
           </div>
 
           {/* Section header */}
