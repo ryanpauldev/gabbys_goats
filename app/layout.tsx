@@ -17,7 +17,7 @@ const architects_daughter = Architects_Daughter({
 })
 
 export const metadata: Metadata = {
-  title: "Gabby's Goats | GOATS - Giving Others Assistance To Serve",
+  title: "Gabby's GOATS | Giving Others Assistance To Serve",
   description: "Supporting and uplifting the community through Gabby's legacy of kindness and service. GOATS - Giving Others Assistance To Serve.",
   metadataBase: new URL('https://gabbys-goats.vercel.app/'),
   openGraph: {
@@ -25,22 +25,22 @@ export const metadata: Metadata = {
     locale: 'en_US',
     url: 'https://gabbys-goats.vercel.app/',
     siteName: "Gabby's Goats",
-    title: "Gabby's Goats | GOATS - Giving Others Assistance To Serve",
+    title: "Gabby's GOATS | Giving Others Assistance To Serve",
     description: "Supporting and uplifting the community through Gabby's legacy of kindness and service. GOATS - Giving Others Assistance To Serve.",
     images: [
       {
-        url: '/images/optimized/og-image.webp', // Create this image
+        url: '/images/og-image.png', // Create this image
         width: 1200,
         height: 630,
-        alt: "Gabby's Goats - Giving Others Assistance To Serve"
+        alt: "Gabby's GOATS - Giving Others Assistance To Serve"
       }
     ]
   },
   twitter: {
     card: 'summary_large_image',
-    title: "Gabby's Goats | GOATS - Giving Others Assistance To Serve",
+    title: "Gabby's Goats | Giving Others Assistance To Serve",
     description: "Supporting and uplifting the community through Gabby's legacy of kindness and service.",
-    images: ['/images/optimized/og-image.webp'], // Same image as OG
+    images: ['/images/og-image.png'], // Same image as OG
   },
   icons: {
     icon: '/favicon.ico',
