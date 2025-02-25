@@ -8,15 +8,17 @@ import Mission from "@/components/mission";
 import Newsletter from "@/components/newsletter";
 import Legacy from "@/components/legacy";
 import Testimonials from "@/components/testimonials";
-import BackgroundParticles from "@/components/background-particles"; // Import ParticlesBackground
+import BackgroundParticles from "@/components/background-particles";
+import DearEllen from "@/components/dear-ellen";
 
 export default function Home() {
   return (
     <>
-      <BackgroundParticles /> {/* Add Particles effect */}
+      <BackgroundParticles />
       <Hero />
       <Legacy />
       <Mission />
+      <DearEllen />
       <Testimonials />
       <Newsletter />
     </>

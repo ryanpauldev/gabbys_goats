@@ -86,6 +86,7 @@ export default function MobileMenu() {
             { name: "Home", to: "home" },
             { name: "Meet Gabby", to: "meet_gabby" },
             { name: "About Us", to: "about_us" },
+            { name: "Dear Ellen", to: "dear_ellen" },
             { name: "Tributes", to: "tributes" },
           ].map((item) => (
             <li key={item.to}>
