@@ -88,7 +88,7 @@ export default function Header() {
                     <Link
                       href="/"
                       onClick={() => handleScrollLink(item.to)}
-                      className="font-medium text-white hover:text-gray-200 px-4 py-3 flex items-center transition duration-150 ease-in-out cursor-pointer"
+                      className="font-medium text-white hover:text-black px-4 py-3 flex items-center transition duration-150 ease-in-out cursor-pointer"
                     >
                       {item.name}
                     </Link>
@@ -99,7 +99,7 @@ export default function Header() {
                       smooth={true}
                       duration={350}
                       offset={-80} // Change from -80 to -50 for shorter scroll distance
-                      className="font-medium text-white hover:text-gray-200 px-4 py-3 flex items-center transition duration-150 ease-in-out cursor-pointer"
+                      className="font-medium text-white hover:text-black px-4 py-3 flex items-center transition duration-150 ease-in-out cursor-pointer"
                     >
                       {item.name}
                     </ScrollLink>
@@ -114,7 +114,7 @@ export default function Header() {
                 <motion.li key={item.href} custom={index + 4} variants={navVariants}>
                   <Link
                     href={item.href}
-                    className="font-medium text-white hover:text-gray-200 px-4 py-3 flex items-center transition duration-150 ease-in-out"
+                    className="font-medium text-white hover:text-black px-4 py-3 flex items-center transition duration-150 ease-in-out"
                   >
                     {item.name}
                   </Link>

@@ -248,7 +248,7 @@ const initializeClover = () => {
 
         // Show processing state
         if (cardResponse) {
-            cardResponse.className = 'mt-4 text-center text-gray-400';
+            cardResponse.className = 'mt-4 text-center text-gray-100';
             cardResponse.textContent = 'Processing payment...';0
         }
 
@@ -308,14 +308,14 @@ const initializeClover = () => {
                             <h1 className="text-4xl md:text-5xl font-bold text-gray-100 mb-4">
                                 Support Gabby's GOATS
                             </h1>
-                            <p className="text-lg text-gray-400 max-w-2xl mx-auto">
+                            <p className="text-lg text-gray-100 max-w-2xl mx-auto">
                                 Your generous donation helps us continue our mission to support and uplift the community.
                             </p>
                         </div>
 
                         <form onSubmit={handleSubmit} className="max-w-xl mx-auto space-y-8" id="payment-form">
                             <div>
-                                <label htmlFor="amount" className="block text-sm font-medium text-gray-400 mb-2">
+                                <label htmlFor="amount" className="block text-sm font-medium text-gray-100 mb-2">
                                     Select Amount
                                 </label>
                                 {/* Preset amount buttons */}
@@ -327,7 +327,7 @@ const initializeClover = () => {
                                             onClick={() => setAmount(preset)}
                                             className={`py-2 px-4 rounded-sm transition duration-150 ease-in-out ${amount === preset
                                                     ? 'bg-purple-600 text-white'
-                                                    : 'bg-white text-gray-400 hover:bg-gray-800'
+                                                    : 'bg-white text-gray-100 hover:bg-gray-800'
                                                 }`}
                                         >
                                             ${preset}
@@ -336,39 +336,37 @@ const initializeClover = () => {
                                 </div>
                                 {/* Custom amount input */}
                                 <div className="flex justify-center">
-                                    <div className="relative h-[48px] w-[120px]">
-                                        <span className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400 z-10">$</span>
-                                            <input
-                                                type="number"
-                                                id="amount"
-                                                min="1"
-                                                step="0.01"  // Add step attribute to allow decimals
-                                                value={amount || ''} 
-                                                onChange={(e) => {
-                                                    // Parse the input value as float instead of integer
-                                                    const inputValue = e.target.value;
-                                                    const parsedValue = parseFloat(inputValue);
-                                                    // Keep two decimal places max
-                                                    setAmount(isNaN(parsedValue) ? 0 : Math.round(parsedValue * 100) / 100);
-                                                }}
-                                                className="form-input absolute inset-0 w-full pl-8 pr-4 bg-white text-gray-200"
-                                                required
-                                            />
+                                    <div className="relative h-[48px] w-[100px]"> {/* Reduced from w-[120px] to w-[100px] */}
+                                        <span className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-100 z-10">$</span>
+                                        <input
+                                            type="number"
+                                            id="amount"
+                                            min="1"
+                                            step="0.01"
+                                            value={amount || ''} 
+                                            onChange={(e) => {
+                                                const inputValue = e.target.value;
+                                                const parsedValue = parseFloat(inputValue);
+                                                setAmount(isNaN(parsedValue) ? 0 : Math.round(parsedValue * 100) / 100);
+                                            }}
+                                            className="form-input absolute inset-0 w-full pl-7 pr-2 bg-white text-gray-200" // Reduced padding
+                                            required
+                                            maxLength={8} // Limit input length to prevent overflow
+                                        />
                                     </div>
                                 </div>
                             </div>
 
                             <div className="space-y-6">
                                 <div>
-                                    <label htmlFor="card-number" className="block text-sm font-medium text-gray-400 mb-2">
-                                        
+                                    <label htmlFor="card-number" className="block text-sm font-medium text-gray-100 mb-2">   
                                     </label>
                                     <div id="card-number" className="h-[48px] bg-white rounded-sm border border-purple-600 p-3"></div>
                                     <div className="input-errors text-red-400 text-sm mt-1" id="card-number-errors" role="alert"></div>
                                 </div>
 
                                 <div>
-                                    <label htmlFor="card-holder" className="block text-sm font-medium text-gray-400 mb-2">
+                                    <label htmlFor="card-holder" className="block text-sm font-medium text-gray-100 mb-2">
                                         
                                     </label>
                                     <div id="card-holder" className="h-[48px] bg-white rounded-sm border border-purple-600 p-3"></div>
@@ -376,14 +374,14 @@ const initializeClover = () => {
 
                                 <div className="grid grid-cols-2 gap-4">
                                     <div>
-                                        <label htmlFor="card-date" className="block text-sm font-medium text-gray-400 mb-2">
+                                        <label htmlFor="card-date" className="block text-sm font-medium text-gray-100 mb-2">
                                             
                                         </label>
                                         <div id="card-date" className="h-[48px] bg-white rounded-sm border border-purple-600 p-3"></div>
                                         <div className="input-errors text-red-400 text-sm mt-1" id="card-date-errors" role="alert"></div>
                                     </div>
                                     <div>
-                                        <label htmlFor="card-cvv" className="block text-sm font-medium text-gray-400 mb-2">
+                                        <label htmlFor="card-cvv" className="block text-sm font-medium text-gray-100 mb-2">
                                            
                                         </label>
                                         <div id="card-cvv" className="h-[48px] bg-white rounded-sm border border-purple-600 p-3"></div>
@@ -392,7 +390,7 @@ const initializeClover = () => {
                                 </div>
 
                                 <div>
-                                    <label htmlFor="card-postal" className="block text-sm font-medium text-gray-400 mb-2">
+                                    <label htmlFor="card-postal" className="block text-sm font-medium text-gray-100 mb-2">
                                         
                                     </label>
                                     <div id="card-postal" className="h-[48px] bg-white rounded-sm border border-purple-600 p-3"></div>
@@ -402,14 +400,14 @@ const initializeClover = () => {
 
                             <button
                                 type="submit"
-                                disabled={amount <= 1}
+                                disabled={amount <= .99}
                                 className={`btn w-full text-white ${
-                                    amount <= 1 
+                                    amount <= .99 
                                         ? 'bg-gray-600 cursor-not-allowed' 
                                         : 'bg-purple-600 hover:bg-purple-700'
                                 }`}
                             >
-                                {amount <= 1 ? 'Enter Amount' : `Donate $${amount}`}
+                                {amount <= .99 ? 'Enter Amount' : `Donate $${amount}`}
                             </button>
                         </form>
                         <div id="card-response" role="alert" className="mt-4 text-center text-red-400"></div>

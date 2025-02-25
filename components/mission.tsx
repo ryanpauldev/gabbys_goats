@@ -36,8 +36,8 @@ export default function Mission() {
               <div className="max-w-xl md:max-w-none md:w-full mx-auto md:col-span-7 lg:col-span-6" data-aos="fade-right">
                 <div className="md:pr-4 lg:pr-12 xl:pr-16">
                   {/*<div className="font-architects-daughter text-xl text-purple-600 mb-2">More speed. Less spend</div> */}
-                  <h3 className="h3 mb-3 ">Our Mission</h3> 
-                  <p className="text-lg text-gray-400 mb-4 ">Our mission is to give others assistance to serve by supporting those who selflessly dedicate themselves to helping others. Through Giving to Givers, we empower individuals who embody Gabby’s spirit of generosity. We achieve this by providing financial assistance to individuals and organizations committed to serving others, fostering meaningful connections between like-minded individuals and groups, and celebrating stories of extraordinary kindness to inspire others. Kindness, care, and generosity are gifts meant to be shared, and just as Gabby did naturally, we will continue her legacy of caring and healing.</p>
+                  <h2 className="h3 mb-3 ">Our Mission</h2> 
+                  <p className="text-lg text-gray-200 mb-4 ">Our mission is to give others assistance to serve by supporting those who selflessly dedicate themselves to helping others. Through Giving to Givers, we empower individuals who embody Gabby’s spirit of generosity. We achieve this by providing financial assistance to individuals and organizations committed to serving others, fostering meaningful connections between like-minded individuals and groups, and celebrating stories of extraordinary kindness to inspire others. Kindness, care, and generosity are gifts meant to be shared, and just as Gabby did naturally, we will continue her legacy of caring and healing.</p>
                   {/* <ul className="text-lg text-gray-400 -mb-2">
                     <li className="flex items-center mb-2">
                       <svg className="w-3 h-3 fill-current text-green-500 mr-2 shrink-0" viewBox="0 0 12 12" xmlns="http://www.w3.org/2000/svg">
@@ -97,10 +97,10 @@ export default function Mission() {
               {/* Content */}
               <div className="max-w-xl md:max-w-none md:w-full mx-auto md:col-span-7 lg:col-span-6" data-aos="fade-left">
                 <div className="md:pl-4 lg:pl-12 xl:pl-16">
-                  <h3 className="h3 mb-3 ">Our Vision</h3> 
-                  <p className="text-lg text-gray-400 mb-4 ">Imagine a world in which every person treated all others as they themselves wished to be treated. Our community and indeed the world can be made better through the influence of individual people. Gabby’s innate ability to encourage, propel, and inspire, can be recognized and continue to be provided to the world through others.</p>
-                  <p className="text-lg text-gray-400 mb-4 ">Just as Gabby did these qualities can take shape in many ways:</p>
-                   <ul className="text-lg text-gray-400 -mb-2">
+                  <h2 className="h3 mb-3 ">Our Vision</h2> 
+                  <p className="text-lg text-gray-200 mb-4 ">Imagine a world in which every person treated all others as they themselves wished to be treated. Our community and indeed the world can be made better through the influence of individual people. Gabby’s innate ability to encourage, propel, and inspire, can be recognized and continue to be provided to the world through others.</p>
+                  <p className="text-lg text-gray-200 mb-4 ">Just as Gabby did these qualities can take shape in many ways:</p>
+                   <ul className="text-lg text-gray-200 -mb-2">
                     <li className="flex items-center mb-2">
                       <svg className="w-3 h-3 fill-current text-green-500 mr-2 shrink-0" viewBox="0 0 12 12" xmlns="http://www.w3.org/2000/svg">
                         <path d="M10.28 2.28L3.989 8.575 1.695 6.28A1 1 0 00.28 7.695l3 3a1 1 0 001.414 0l7-7A1 1 0 0010.28 2.28z" />
@@ -159,9 +159,9 @@ export default function Mission() {
               <div className="max-w-xl md:max-w-none md:w-full mx-auto md:col-span-7 lg:col-span-6" data-aos="fade-right">
                 <div className="md:pr-4 lg:pr-12 xl:pr-16">
                   {/*<div className="font-architects-daughter text-xl text-purple-600 mb-2">More speed. Less spend</div> */}
-                  <h3 className="h3 mb-3 ">Our Purpose</h3> 
-                  <p className="text-lg text-gray-400 mb-4 ">The foundation seeks to commemorate Gabrielle Kraft Buckman’s unwavering spirit of generosity and love. Gabby, known affectionately as Goober, Goob, Gabs, devoted her life to uplifting others, leaving an indelible mark of selflessness. Her profound impact on countless lives, both intimately known and briefly encountered, is a testament to the depth of her compassion. The foundation stands as a tribute to Gabby’s boundless love, aiming to continue the legacy of kindness she embodied and the passion she had to give to those who gave. In honoring her memory, it echoes the profound lesson that simple acts of kindness can create lasting impact. And, ensures that the world never forgets the extraordinary soul that was Gabrielle Kraft Buckman.</p>
-                  <p className="text-lg text-gray-400 mb-4 ">Help us pass on the torch of kindness in your own unique way to create a world that continues to be shaped by the enduring ripple effect of Gabby’s lessons in love and generosity.</p>
+                  <h2 className="h3 mb-3 ">Our Purpose</h2> 
+                  <p className="text-lg text-gray-200 mb-4 ">The foundation seeks to commemorate Gabrielle Kraft Buckman’s unwavering spirit of generosity and love. Gabby, known affectionately as Goober, Goob, Gabs, devoted her life to uplifting others, leaving an indelible mark of selflessness. Her profound impact on countless lives, both intimately known and briefly encountered, is a testament to the depth of her compassion. The foundation stands as a tribute to Gabby’s boundless love, aiming to continue the legacy of kindness she embodied and the passion she had to give to those who gave. In honoring her memory, it echoes the profound lesson that simple acts of kindness can create lasting impact. And, ensures that the world never forgets the extraordinary soul that was Gabrielle Kraft Buckman.</p>
+                  <p className="text-lg text-gray-200 mb-4 ">Help us pass on the torch of kindness in your own unique way to create a world that continues to be shaped by the enduring ripple effect of Gabby’s lessons in love and generosity.</p>
                   {/* <ul className="text-lg text-gray-400 -mb-2">
                     <li className="flex items-center mb-2">
                       <svg className="w-3 h-3 fill-current text-green-500 mr-2 shrink-0" viewBox="0 0 12 12" xmlns="http://www.w3.org/2000/svg">

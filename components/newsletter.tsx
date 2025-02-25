@@ -73,7 +73,7 @@ export default function Newsletter() {
                 />
                 <button
                   type="submit"
-                  className="btn text-purple-600 bg-purple-100 hover:bg-white shadow"
+                  className="btn text-purple-900 bg-purple-100 hover:bg-white shadow"
                 >
                   Join
                 </button>
