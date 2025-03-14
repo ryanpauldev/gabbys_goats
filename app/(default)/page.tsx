@@ -16,10 +16,6 @@ export default function Home() {
     <>
       <BackgroundParticles />
       <Hero />
-      <Legacy />
-      <Mission />
-      <DearEllen />
-      <Testimonials />
       <Newsletter />
     </>
   );

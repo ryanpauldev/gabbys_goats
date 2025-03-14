@@ -5,11 +5,15 @@ import EllenImage1 from '@/public/images/optimized/ellen_1.webp'
 import EllenImage2 from '@/public/images/optimized/ellen_2.webp'
 import EllenImage3 from '@/public/images/optimized/ellen_3.webp'
 
-export default function DearEllen() {
+// Add isStandalonePage prop
+export default function DearEllen({ isStandalonePage = false }) {
   return (
-    <section id="dear_ellen">
+    <section 
+      id={isStandalonePage ? undefined : "dear_ellen"}
+      className={isStandalonePage ? "" : ""}
+    >
       <div className="max-w-6xl mx-auto px-4 sm:px-6 bg-gray-900">
-        <div className="py-6 md:py-10">
+        <div className={`${isStandalonePage ? 'pt-12' : 'py-6 md:py-10'}`}>
           {/* Section header */}
           <div className="max-w-3xl mx-auto text-center pb-12">
             <h2 className="h2 pb-2" data-aos="fade-up">Dear Ellen, meet Gabby!</h2>

@@ -5,17 +5,20 @@ import FeatImage02 from '@/public/images/gabby_on_boat.jpg'
 import FeatImage03 from '@/public/images/gabby_holding_chick.jpg'
 import FeatHeaderImage from '@/public/images/buckman_family.png'
 
-export default function Mission() {
+// Add isStandalonePage prop
+export default function Mission({ isStandalonePage = false }) {
   return (
-    <section id = "about_us">
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 bg-gray-900">
-        <div className="py-6 md:py-10 border-t border-gray-800">
+    <section 
+      id={isStandalonePage ? undefined : "about_us"}
+      className={isStandalonePage ? "mt-20" : ""}
+    >
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 bg-gray-900 mb-4">
+        <div className={`${isStandalonePage ? 'pt-0' : 'py-6 md:py-10'} border-t border-gray-800`}>
 
           {/* Section header */}
           <div className="max-w-3xl mx-auto text-center pb-12 md:pb-16">
             {/*<div className="inline-flex text-sm font-semibold py-1 px-3 m-2 text-green-600 bg-green-200 rounded-full mb-4">Reach goals that matter</div>*/}
-            <p className="text-xl text-gray-400 mb-2 " data-aos="fade-up" data-aos-delay="50">About Gabby's Goats</p>
-            <h1 className="h2 mb-4 ">Our Mission, Vision, and Purpose</h1>
+            <h1 className="h2 mt-8" data-aos="fade-up">Our Mission, Vision, and Purpose</h1>
             {/* <div className="w-full flex justify-center" data-aos="fade-up">
               <Image
                 src={FeatHeaderImage}

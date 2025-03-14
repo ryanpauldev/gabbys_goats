@@ -77,37 +77,37 @@ export default function Header() {
           >
             <motion.ul className="flex grow justify-end flex-wrap items-center">
               {[
-                { name: "Home", to: "home" },
-                { name: "Meet Gabby", to: "meet_gabby" },
-                { name: "About Us", to: "about_us" },
-                { name: "Dear Ellen", to: "dear_ellen" },
-                { name: "Tributes", to: "tributes" },
+                { name: "Home", to: "home", path: "/" },
+                { name: "Meet Gabby", to: "", path: "/meet-gabby" },
+                { name: "Mission", to: "", path: "/mission" },
+                { name: "Tributes", to: "", path: "/tributes" }, // Add this line
+                // Keep any other navigation items
               ].map((item, index) => (
-                <motion.li key={item.to} custom={index} variants={navVariants}>
-                  {isDonate ? (
-                    // If on donate page, use Link with onClick handler
-                    <Link
-                      href="/"
-                      onClick={() => handleScrollLink(item.to)}
-                      className="font-medium text-white hover:text-black px-4 py-3 flex items-center transition duration-150 ease-in-out cursor-pointer"
-                    >
-                      {item.name}
-                    </Link>
-                  ) : (
-                    // Otherwise use ScrollLink as before
+                <motion.li key={item.name} custom={index} variants={navVariants}>
+                  {pathname === '/' && item.to ? (
+                    // On homepage and has a section ID - use ScrollLink
                     <ScrollLink
                       to={item.to}
                       smooth={true}
                       duration={350}
-                      offset={-80} // Change from -80 to -50 for shorter scroll distance
+                      offset={-80}
                       className="font-medium text-white hover:text-black px-4 py-3 flex items-center transition duration-150 ease-in-out cursor-pointer"
                     >
                       {item.name}
                     </ScrollLink>
+                  ) : (
+                    // Use Next.js Link for page navigation
+                    <Link 
+                      href={item.path}
+                      className="font-medium text-white hover:text-black px-4 py-3 flex items-center transition duration-150 ease-in-out"
+                    >
+                      {item.name}
+                    </Link>
                   )}
                 </motion.li>
               ))}
 
+              {/* Donation and Contact links remain the same */}
               {[
                 { name: "Donate", href: "/donate" },
                 { name: "Contact Us", href: "https://forms.gle/hYj46wLLRdxx34aa9" },

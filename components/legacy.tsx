@@ -6,18 +6,23 @@ import FeatImage03 from '@/public/images/gabby_balancing_goat.jpg'
 import FeatHeaderImage from '@/public/images/gabby_with_pumpkins.jpg'
 import GabbyPNG from '@/public/images/gabby_png.png'
 
-export default function Legacy() {
+// Add a prop to check if it's on its own page
+export default function Legacy({ isStandalonePage = false }) {
   return (
-    <section id = "meet_gabby">
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 bg-gray-900">
-        <div className="py-6 md:py-10 border-t border-gray-800">
+    <section 
+      id={isStandalonePage ? undefined : "meet_gabby"} 
+      className={isStandalonePage ? "mt-20" : ""} // Add margin-top only when standalone
+    >
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 bg-gray-900 mb-4">
+        <div className={`${isStandalonePage ? 'pt-0' : 'py-6 md:py-10'} border-t border-gray-800`}>
 
           {/* Section header */}
           <div className="max-w-3xl mx-auto text-center pb-12 md:pb-16">
             
             {/*<div className="inline-flex text-sm font-semibold py-1 px-3 m-2 text-green-600 bg-green-200 rounded-full mb-4">Reach goals that matter</div>*/}
-            <p className="text-xl text-gray-400 mb-2 " data-aos="fade-up" data-aos-delay="50">A Courageous Heart and Resilient Spirit</p>
-            <h1 className="h2 mb-4 " data-aos="fade-up">The Legacy of Gabrielle Kraft Buckman</h1>
+            
+            <h1 className="h2 mt-8" data-aos="fade-up">The Legacy of Gabrielle Kraft Buckman</h1>
+            <p className="text-xl text-gray-200 mb-4 " data-aos="fade-up" data-aos-delay="50">A Courageous Heart and Resilient Spirit</p>
             
             <p className="text-lg text-gray-200 mb-4 " data-aos="fade-up">
               Gabrielle Kraft Buckman, a radiant soul born and raised in the heart of New Jersey, left a permanent mark on the world that transcends the brevity of her years. Endearingly referred to as Gabby, Gab, or Goober, her journey is a tapestry woven with threads of love, resilience, and a tenacious commitment to bringing light to the lives she touched.
@@ -204,3 +209,5 @@ export default function Legacy() {
     </section>
   )
 }
+
+<Legacy isStandalonePage={true} />

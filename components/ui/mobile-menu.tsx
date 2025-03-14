@@ -83,22 +83,13 @@ export default function MobileMenu() {
       >
         <ul className="bg-purple-600 px-4 py-2 text-center">
           {[
-            { name: "Home", to: "home" },
-            { name: "Meet Gabby", to: "meet_gabby" },
-            { name: "About Us", to: "about_us" },
-            { name: "Dear Ellen", to: "dear_ellen" },
-            { name: "Tributes", to: "tributes" },
+            { name: "Home", to: "home", path: "/" },
+            { name: "Meet Gabby", to: "", path: "/meet-gabby" },
+            { name: "Mission", to: "", path: "/mission" },
+            { name: "Tributes", to: "", path: "/tributes" },
           ].map((item) => (
-            <li key={item.to}>
-              {isDonate ? (
-                <Link
-                  href="/"
-                  onClick={() => handleScrollLink(item.to)}
-                  className="font-medium text-white hover:text-gray-200 px-4 py-3 block transition duration-150 ease-in-out cursor-pointer"
-                >
-                  {item.name}
-                </Link>
-              ) : (
+            <li key={item.name}>
+              {pathname === '/' && item.to ? (
                 <ScrollLink
                   to={item.to}
                   smooth={true}
@@ -109,10 +100,18 @@ export default function MobileMenu() {
                 >
                   {item.name}
                 </ScrollLink>
+              ) : (
+                <Link
+                  href={item.path}
+                  className="font-medium text-white hover:text-gray-200 px-4 py-3 block transition duration-150 ease-in-out"
+                  onClick={() => setMobileNavOpen(false)}
+                >
+                  {item.name}
+                </Link>
               )}
             </li>
           ))}
-          
+
           {/* External links */}
           {[
             { name: "Donate", href: "/donate" },

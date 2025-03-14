@@ -5,16 +5,20 @@ import TestimonialImage01 from '@/public/images/testimonial-01.jpg'
 import TestimonialImage02 from '@/public/images/testimonial-02.jpg'
 import TestimonialImage03 from '@/public/images/testimonial-03.jpg'
 
-export default function Testimonials() {
+// Add isStandalonePage prop
+export default function Testimonials({ isStandalonePage = false }) {
   return (
-    <section id="tributes">
+    <section 
+      id={isStandalonePage ? undefined : "tributes"}
+      className={isStandalonePage ? "mt-20" : ""}
+    >
       <div className="max-w-6xl mx-auto px-4 sm:px-6 bg-gray-900">
-        <div className="py-6 md:py-10 border-t border-gray-800">
+        <div className={`${isStandalonePage ? 'pt-0' : 'py-6 md:py-10'} border-t border-gray-800`}>
 
           {/* Section header */}
           <div className="max-w-3xl mx-auto text-center">
-            <h2 className="h2 mb-4">Tributes</h2>
-            <p className="text-xl text-gray-400">Gabby's Impact</p>
+            <h1 className="h2 mt-8" data-aos="fade-up">Tributes</h1>
+            <p className="text-xl text-gray-200 mb-4 " data-aos="fade-up" data-aos-delay="50">Gabby's Impact</p>
           </div>
 
           {/* Testimonials */}

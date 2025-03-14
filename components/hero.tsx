@@ -7,10 +7,10 @@ export default function Hero() {
       <div className="max-w-6xl mx-auto px-4 sm:px-6 relative bg-gray-900">
         <div className="relative pt-32 pb-0 md:pb-0">
           <div className="max-w-3xl mx-auto text-center pb-12 md:pb-16">
-            <p className="text-xl text-gray-400 mb-2" data-aos="fade-up" data-aos-delay="50">
+            <h1 className="h1 mb-4" data-aos="fade-up">Gabby's GOATS</h1>
+            <p className="text-xl text-gray-200 mb-2" data-aos="fade-up" data-aos-delay="50">
               Giving Others Assistance To Serve
             </p>
-            <h1 className="h1 mb-4" data-aos="fade-up">Gabby's GOATS</h1>
             
             {/* Hero image - Remove loading="lazy" for above-the-fold image */}
             <div className="w-full flex justify-center mb-8" data-aos="fade-up">
